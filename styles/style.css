@@ -1,0 +1,267 @@
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Extrabold.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #828282;
+}
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav-item {
+  font-weight: 800;
+  font-size: 14px;
+  font-family: "Gilroy";
+}
+.header__nav-link {
+  color: #828282;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+.header__nav-link:hover {
+  color: #070707;
+}
+
+.hero {
+  padding-top: 40px;
+  padding-bottom: 105px;
+}
+.hero__flex-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  margin-bottom: 50px;
+  line-height: 1;
+}
+.hero__name {
+  font-weight: 800;
+  font-size: 35px;
+  font-family: "Gilroy";
+  width: min-content;
+  transform: translateY(3px);
+}
+.hero__info {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy";
+  justify-self: center;
+  color: #070707;
+}
+.hero__langs {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy";
+  justify-self: end;
+  margin-right: -30px;
+  margin-bottom: 35px;
+  color: #828282;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+}
+.hero__lang:hover {
+  cursor: pointer;
+}
+.hero__lang.active-lang {
+  color: #070707;
+}
+.hero__langs-separator {
+  color: #070707;
+}
+.hero__foto-container {
+  height: 500px;
+  overflow: hidden;
+}
+.hero__foto {
+  width: 100%;
+}
+
+.info {
+  padding-top: 120px;
+  padding-bottom: 107px;
+  background-color: #f6f6f6;
+}
+.info__flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  margin: 0 auto;
+}
+.info__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.info__discription {
+  text-align: center;
+}
+.info__discription p {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy";
+}
+.info__discription p:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 30px;
+  font-family: "Gilroy";
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 91px;
+  padding-bottom: 110px;
+}
+.skills__title {
+  align-self: center;
+  margin-bottom: 69px;
+}
+.skills__discription {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy";
+  align-self: center;
+  margin-bottom: 84px;
+  color: #828282;
+}
+
+.skills-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.skills-cards__skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-cards__img {
+  width: 90px;
+}
+.skills-cards__stars img {
+  cursor: pointer;
+}
+
+.portfolio {
+  padding-top: 112px;
+  padding-bottom: 96px;
+  background-color: #f6f6f6;
+}
+.portfolio__flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__title {
+  margin-bottom: 47px;
+}
+.portfolio__pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__page:not(:last-child) {
+  margin-bottom: 50px;
+}
+.portfolio__page-img {
+  margin-bottom: 45px;
+}
+.portfolio__page-name {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy";
+  color: #070707;
+}
+
+.contatcs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 115px;
+  padding-bottom: 120px;
+}
+.contatcs__title {
+  margin-bottom: 40px;
+}
+.contatcs__info {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.contatcs__message {
+  font-weight: 800;
+  font-size: 16px;
+  font-family: "Gilroy";
+  margin-bottom: 85px;
+  padding: 12px 29px 12px 29px;
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+}
+.contatcs__list-item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

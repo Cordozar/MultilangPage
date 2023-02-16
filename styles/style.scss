@@ -1,0 +1,299 @@
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Gilroy';
+
+  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: 'Gilroy';
+
+  src: url('../assets/fonts/Gilroy-Extrabold.woff2') format('woff2');
+}
+
+@mixin font($font-weight, $font-size) {
+  font-weight: $font-weight;
+  font-size: #{$font-size}px;
+  font-family: 'Gilroy';
+}
+
+$max-width-page: 1000px;
+$color-grey: #828282;
+$color-black: #070707;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  $padding-right: 30px;
+  $padding-left: 30px;
+
+  max-width: $max-width-page - ($padding-right + $padding-left);
+  margin: 0 auto;
+  padding-right: $padding-right;
+  padding-left: $padding-left;
+}
+
+
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $color-grey;
+
+  &__nav {
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav-item {
+    @include font(800, 14);
+  }
+  &__nav-link {
+    color: #828282;
+    text-decoration: none;
+    transition: color .3s linear;
+
+    &:hover {
+      color: #070707;
+    }
+  }
+}
+
+.hero {
+  padding-top: 40px;
+  padding-bottom: 105px;
+
+  &__flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+    margin-bottom: 50px;
+    line-height: 1;
+  }
+  &__name {
+    @include font(800, 35);
+
+    width: min-content;
+    transform: translateY(3px);
+  }
+  &__info {
+    @include font(500, 16);
+
+    justify-self: center;
+    color: $color-black;
+  }
+  &__langs {
+    @include font(500, 16);
+
+    justify-self: end;
+    margin-right: -30px;
+    margin-bottom: 35px;
+    color: $color-grey;
+    text-transform: uppercase;
+    transform: rotate(270deg);
+  }
+  &__lang {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.active-lang {
+      color: $color-black;
+    }
+  }
+  &__langs-separator {
+    color: $color-black;
+  }
+  &__foto-container {
+    height: 500px;
+    overflow: hidden;
+  }
+  &__foto {
+    width: 100%;
+  }
+}
+
+
+
+.info {
+  padding-top: 120px;
+  padding-bottom: 107px;
+  background-color: #f6f6f6;
+
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__discription {
+    text-align: center;
+
+    p {
+      @include font(500, 16);
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.title {
+  @include font(800, 30);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 91px;
+  padding-bottom: 110px;
+
+  &__title {
+    align-self: center;
+    margin-bottom: 69px;
+  }
+  &__discription {
+    @include font(500, 16);
+
+    align-self: center;
+    margin-bottom: 84px;
+    color: $color-grey;
+  }
+}
+
+.skills-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img {
+    width: 90px;
+  }
+  &__stars {
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.portfolio {
+  padding-top: 112px;
+  padding-bottom: 96px;
+  background-color: #f6f6f6;
+
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 47px;
+  }
+  &__pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+  &__page-img {
+    margin-bottom: 45px;
+  }
+  &__page-name {
+    @include font(500, 16);
+
+    color: $color-black;
+  }
+}
+
+.contatcs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 115px;
+  padding-bottom: 120px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__info {
+    @include font(500, 16);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__message {
+    @include font(800, 16);
+
+    margin-bottom: 85px;
+    padding: 12px 29px 12px 29px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+  }
+  &__list {
+  }
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+}
+
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
